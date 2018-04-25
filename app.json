@@ -31,7 +31,6 @@
         "arguments": "",
         "version": "8.56.29.59"
     },
-    
     "shortcut": {
         "company": "OpenFin",
         "description": "excel-api-example",
@@ -46,5 +45,4 @@
             "forceDownload": true
         }
     ]
-  
 }

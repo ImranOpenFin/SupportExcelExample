@@ -30,7 +30,7 @@ fin.desktop.main(function () {
           if (connected) {
               onExcelConnected(fin.desktop.Excel);
           } else {
-              setDisplayContainer(view.noConnectionContainer);
+              
           }
       });
   }
@@ -47,7 +47,6 @@ fin.desktop.main(function () {
     .catch(err => console.error(err));
 
 fin.desktop.System.getEnvironmentVariable("userprofile", profilePath => {
-    view.openWorkbookPath.value = profilePath + "\\Documents\\";
 });
 
 
