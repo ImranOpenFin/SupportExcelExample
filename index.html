@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+
+    <title>JS to Excel</title>
+  </head>
+  <body>
+    <h1 class="headline">JS To Excel</h1>
+    <div id="time" class="time"></div>
+
+    <br />
+    <button onclick="closeMyApp()">Close Me</button>
+    <button onclick="anotherWindow()">Another Window</button>
+
+   
+    <div id="noConnectionContainer" class="noWorkbooks">
+      <br/ >
+    <a id="launchExcelLink" href="#">Launch Excel</a>
+   </div>
+   <br>
+   <div id="noWorkbooksContainer" class="noWorkbooks">
+    <a id="newWorkbookLink" href="#">New Workbook</a>
+   </div>
+
+
+    <script src="js/main.js"></script>
+    
+   
+   
+   <script>
+      var timeElement = document.getElementById("time");
+      function setTime() {
+        timeElement.innerHTML = new Date().toLocaleString();
+      }
+      setTime();
+      var clockIntervalId = setInterval( function(){ setTime() }, 1000);
+      function closeMyApp(){
+      fin.desktop.Application.getCurrent().close();
+      }
+
+      function anotherWindow(){
+        if (typeof fin !== 'undefined') {
+          
+              new fin.desktop.Window({
+              name: "anotherWindow",
+              url: "anotherWindow.html",
+              defaultLeft: 10,
+              defaultTop: 220,
+              autoShow: true });
+          
+        } else{
+
+       window.open('anotherWindow.html');
+
+      }
+     };
+
+    </script>
+
+
+  </body>
+</html>
