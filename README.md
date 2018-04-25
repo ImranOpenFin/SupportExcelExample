@@ -2,7 +2,7 @@
 
 ##### Prerequisites
 
-The launcher assumes you have the 'http-server' node module installed. If not use "npm install -g http-server" to install. The app will run on port 8080.
+The app will run on port 8080.
 
 ##### Cloning and branching
 	git clone https://github.com/ImranOpenFin/SupportExcelExample.git
